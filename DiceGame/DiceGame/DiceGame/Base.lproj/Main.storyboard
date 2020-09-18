@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PqP-Bp-6QN" userLabel="Stack Top">
+                                <rect key="frame" x="87" y="74" width="240" height="778"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="rgK-41-UkR" userLabel="Stack Dices">
+                                        <rect key="frame" x="88" y="0.0" width="152" height="179.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Four" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-ER-y25">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="179.5"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Six" translatesAutoresizingMaskIntoConstraints="NO" id="KAF-r3-ELh">
+                                                <rect key="frame" x="102" y="0.0" width="50" height="179.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2LG-xH-uqF" userLabel="Stack Buttons">
+                                        <rect key="frame" x="100" y="199.5" width="140" height="179.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp7-Su-6nL">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="179.5"/>
+                                                <state key="normal" title="&lt; 7"/>
+                                                <connections>
+                                                    <action selector="lessThanSevenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MDp-37-Kcc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zln-lJ-Rpe">
+                                                <rect key="frame" x="55" y="0.0" width="30" height="179.5"/>
+                                                <state key="normal" title="= 7"/>
+                                                <connections>
+                                                    <action selector="equalToSevenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kct-3R-S1v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83m-iF-Pd8">
+                                                <rect key="frame" x="110" y="0.0" width="30" height="179.5"/>
+                                                <state key="normal" title="&gt; 7"/>
+                                                <connections>
+                                                    <action selector="greaterThanSevenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fWJ-qg-pdG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="da0-Yp-cDi" userLabel="Stack Reset">
+                                        <rect key="frame" x="201" y="399" width="39" height="179.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-HR-hda">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="179.5"/>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nr7-Kd-9FB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FsH-Cz-haE" userLabel="Stack Label">
+                                        <rect key="frame" x="119" y="598.5" width="121" height="179.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score = 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aze-UT-6wh">
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="179.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PqP-Bp-6QN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="1Wh-1l-TKj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PqP-Bp-6QN" secondAttribute="bottom" constant="10" id="5Va-yd-foe"/>
+                            <constraint firstItem="PqP-Bp-6QN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="UK9-Sy-Y28"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PqP-Bp-6QN" secondAttribute="trailing" constant="67" id="cmB-co-xPH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dice1" destination="jUr-ER-y25" id="dM0-c7-ay4"/>
+                        <outlet property="dice2" destination="KAF-r3-ELh" id="BNP-hz-wOd"/>
+                        <outlet property="lblScore" destination="aze-UT-6wh" id="5VF-B6-zoS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="137.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Four" width="50" height="50"/>
+        <image name="Six" width="50" height="50"/>
+    </resources>
+</document>
