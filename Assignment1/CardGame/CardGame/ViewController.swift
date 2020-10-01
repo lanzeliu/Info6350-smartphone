@@ -90,6 +90,5 @@ class ViewController: UIViewController {
             lblWinner.text = "No Winner"
         }
     }
-    
 }
 
