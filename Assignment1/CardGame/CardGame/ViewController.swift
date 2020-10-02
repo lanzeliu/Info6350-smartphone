@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playFunction(_ sender: UIButton) {
-        print("play!")
+        
         let cardArray: [Int] = cardDrawing()
         let whoGoesFirstArray: [Int] = whoGoesFirst()
         cardImageUpdate(cardArray: cardArray, whoGoesFirstArray: whoGoesFirstArray)
