@@ -92,11 +92,11 @@ class ViewController: UIViewController {
     func showAlert() {
         let alert = UIAlertController(title: "Play Again", message: "Play Again?", preferredStyle: .alert)
         
-        let OK = UIAlertAction(title: "OK", style: .default) { (action) in
+        let OK = UIAlertAction(title: "Yes", style: .default) { (action) in
             self.gameProcess()
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let cancel = UIAlertAction(title: "No", style: .cancel) { (action) in
             print("Cancel pressed")
         }
         
