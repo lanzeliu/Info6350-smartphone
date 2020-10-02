@@ -40,11 +40,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playFunction(_ sender: UIButton) {
-        
-        let cardArray: [Int] = cardDrawing()
-        let whoGoesFirstArray: [Int] = whoGoesFirst()
-        cardImageUpdate(cardArray: cardArray, whoGoesFirstArray: whoGoesFirstArray)
-        winnerDetermine(cardArray: cardArray, whoGoesFirstArray: whoGoesFirstArray)
+        gameProcess()
     }
     
     func cardDrawing() -> Array<Int> {
@@ -89,6 +85,32 @@ class ViewController: UIViewController {
         } else {
             lblWinner.text = "No Winner"
         }
+        showAlert()
     }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Play Again", message: "Play Again?", preferredStyle: .alert)
+        
+        let OK = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.gameProcess()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            print("Cancel pressed")
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(OK)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func gameProcess() {
+        let cardArray: [Int] = cardDrawing()
+        let whoGoesFirstArray: [Int] = whoGoesFirst()
+        cardImageUpdate(cardArray: cardArray, whoGoesFirstArray: whoGoesFirstArray)
+        winnerDetermine(cardArray: cardArray, whoGoesFirstArray: whoGoesFirstArray)
+    }
+    
 }
 
