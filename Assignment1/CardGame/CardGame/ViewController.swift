@@ -80,12 +80,13 @@ class ViewController: UIViewController {
         let player2Index = whoGoesFirstArray[1]
         if (cardArray[player1Index] == 3 || cardArray[player1Index + 2] == 3 || cardArray[player1Index + 4] == 3) {
             lblWinner.text = "Play1 Wins!"
+            showAlert()
         } else if (cardArray[player2Index] == 3 || cardArray[player2Index + 2] == 3 || cardArray[player2Index + 4] == 3) {
             lblWinner.text = "Player2 Wins!"
+            showAlert()
         } else {
             lblWinner.text = "No Winner"
         }
-        showAlert()
     }
     
     func showAlert() {
